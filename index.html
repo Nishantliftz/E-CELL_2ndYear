@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2><i class="fas fa-camera"></i> SocialApp</h2>
+            <div class="nav-menu">
+                <a href="#" class="nav-link active" data-page="feed"><i class="fas fa-home"></i> Feed</a>
+                <a href="#" class="nav-link" data-page="profile"><i class="fas fa-user"></i> Profile</a>
+                <a href="#" class="nav-link" data-page="create"><i class="fas fa-plus"></i> Create</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Feed Page -->
+        <div id="feed-page" class="page active">
+            <h1>Your Feed</h1>
+            <div id="posts-container" class="posts-container"></div>
+        </div>
+
+        <!-- Profile Page -->
+        <div id="profile-page" class="page">
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar"><i class="fas fa-user-circle"></i></div>
+                    <div class="profile-info">
+                        <h2 id="profile-name">Loading...</h2>
+                        <p id="profile-username">@username</p>
+                        <p id="profile-bio">Bio will appear here</p>
+                        <div class="profile-stats">
+                            <span><strong id="post-count">0</strong> posts</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-posts">
+                    <h3>Posts</h3>
+                    <div id="profile-posts-container" class="posts-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Post Page -->
+        <div id="create-page" class="page">
+            <div class="create-container">
+                <h1>Create New Post</h1>
+                <form id="create-post-form" class="create-form">
+                    <div class="form-group">
+                        <label for="user-select">Select User:</label>
+                        <select id="user-select" required>
+                            <option value="">Choose a user...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Image:</label>
+                        <p style="color: #8e8e8e; font-size: 0.9rem; margin: 0;">A random image will be automatically assigned</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-caption">Caption:</label>
+                        <textarea id="post-caption" placeholder="What's on your mind?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-share"></i> Share Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading & Messages -->
+    <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    <div id="message" class="message hidden">
+        <span id="message-text"></span>
+        <button id="message-close">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

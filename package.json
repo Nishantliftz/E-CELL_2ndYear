@@ -1,0 +1,20 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "A social media web application inspired by Instagram",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "uuid": "^9.0.1"
+  },
+  "keywords": [
+    "social-media",
+    "instagram",
+    "web-app"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
